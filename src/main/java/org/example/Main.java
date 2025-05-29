@@ -1,18 +1,26 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+import java.util.Arrays;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i iiii= " + i);
-            System.out.println(0);
+class Main{
+    public static int[] selectionS(int[]arr){
+        int inner,outer,min;
+        for ( outer=0;outer< arr.length;outer++){
+            min=outer;
+            for (inner=outer+1;inner<arr.length;inner++){
+                if (arr[min]>arr[inner]) {
+                    min=inner;
+                }
+            }
+            int temp=arr[outer];
+            arr[outer]=arr[min];
+            arr[min]=temp;
         }
+        return arr;
+    }
+    public static void main(String[]args){
+        int[]a={4,2,6,9,6};
+        int[]ab=selectionS(a);
+        System.out.println(Arrays.toString(ab));
     }
 }
