@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 
-class Main{
+class Selection_Sort {
     public static int[] selectionS(int[]arr){
         int inner,outer,min;
         for ( outer=0;outer< arr.length;outer++){
@@ -19,7 +19,7 @@ class Main{
         return arr;
     }
     public static void main(String[]args){
-        int[]a={4,2,6,9,6};
+        int[]a={3,6,8,2,5,2,9};
         int[]ab=selectionS(a);
         System.out.println(Arrays.toString(ab));
     }
