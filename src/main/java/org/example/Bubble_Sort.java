@@ -16,7 +16,7 @@ class Bubble_Sort {
         return a;
     }
     public static void main(String[]args){
-        int[]s=BubbleSort(new int[]{4, 2, 6, 8, 3, 9, 2});
+        int[]s=BubbleSort(new int[]{4, 10, 6, 8, 3, 9, 2});
         System.out.println(Arrays.toString(s));
 
     }
